@@ -1,4 +1,4 @@
-# drag-select ⚡️
+# drag-selectjs ⚡️
 
 > _Make any element selectable with just a few lines of code_ 👊
 
@@ -9,19 +9,19 @@
 ## Installation
 
 ```bash
-npm i drag-select
+npm i drag-selectjs
 ```
 
 or...
 
 ```bash
-yarn add drag-select
+yarn add drag-selectjs
 ```
 
 ## Usage
 
 ```js
-import { dragSelect, onSelected } from 'drag-select'
+import { dragSelect, onSelected } from 'drag-selectjs'
 
 dragSelect('drag-box-class', 'selected-element-class') // Arguments are optional
 

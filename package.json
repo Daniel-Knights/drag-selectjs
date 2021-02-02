@@ -1,5 +1,5 @@
 {
-    "name": "drag-select",
+    "name": "drag-selectjs",
     "version": "0.0.1",
     "scripts": {
         "dev": "vite",
