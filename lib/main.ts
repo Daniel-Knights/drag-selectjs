@@ -17,7 +17,7 @@ export function onSelected(cb: () => unknown) {
  * @param dragBoxClass - Class applied to the drag-box.
  * @param selectedClass - Class applied to any selected elements.
  */
-export function dragSelect(
+export function init(
     dragBoxClass = '__dragselect--box',
     selectedClass = '__dragselect--selected'
 ) {
@@ -201,10 +201,4 @@ export function dragSelect(
     document.addEventListener('mousedown', mouseDownHandler)
     document.addEventListener('mousemove', mouseMoveHandler)
     document.addEventListener('mouseup', mouseUpHandler)
-}
-
-// @ts-ignore
-if (typeof exports === 'undefined' && typeof window !== 'undefined') {
-    // @ts-ignore
-    window['DragSelect'] = { init: dragSelect, onSelected }
 }

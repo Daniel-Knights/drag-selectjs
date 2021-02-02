@@ -7,6 +7,11 @@ colorette@^1.2.1:
   resolved "https://registry.yarnpkg.com/colorette/-/colorette-1.2.1.tgz#4d0b921325c14faf92633086a536db6e89564b1b"
   integrity sha512-puCDz0CzydiSYOrnXpz/PKd69zRrribezjtE9yd4zvytoRc8+RY/KJPvtPFKZS3E3wP6neGyMe0vOTlHO5L3Pw==
 
+drag-selectjs@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/drag-selectjs/-/drag-selectjs-0.0.4.tgz#838f7f1fab58d2bc977f7ec2fbf6cb4b2991eadc"
+  integrity sha512-/90gPra7kT+8k4PUspBg/cRSInD1T6DptsN5O5Clmq/yrqHTC+iNOkFIK/PDVvA024RsL9CQBWCr/4PTzbVIHg==
+
 esbuild@^0.8.34:
   version "0.8.39"
   resolved "https://registry.yarnpkg.com/esbuild/-/esbuild-0.8.39.tgz#18b84a3d56173c55ee8f45bc6c7b5374b0a98ecb"
