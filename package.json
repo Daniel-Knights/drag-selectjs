@@ -23,5 +23,8 @@
             "import": "./dist/drag-select.es.js",
             "require": "./dist/drag-select.umd.js"
         }
+    },
+    "dependencies": {
+        "drag-selectjs": "^0.0.1"
     }
 }

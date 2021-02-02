@@ -202,3 +202,9 @@ export function dragSelect(
     document.addEventListener('mousemove', mouseMoveHandler)
     document.addEventListener('mouseup', mouseUpHandler)
 }
+
+// @ts-ignore
+if (typeof exports === 'undefined' && typeof window !== 'undefined') {
+    // @ts-ignore
+    window['DragSelect'] = { init: dragSelect, onSelected }
+}
