@@ -25,6 +25,6 @@
         }
     },
     "dependencies": {
-        "drag-selectjs": "^0.0.1"
+        "drag-selectjs": "^0.0.2"
     }
 }

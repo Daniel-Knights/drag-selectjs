@@ -12,6 +12,13 @@ drag-selectjs@^0.0.1:
   resolved "https://registry.yarnpkg.com/drag-selectjs/-/drag-selectjs-0.0.1.tgz#92b070f98877a6558e06131ebaad833fe40c78a5"
   integrity sha512-EwUJGKt//Ay92go0IcGqyQh1UPk7k7Q+8oG0ksPzSQ4Fke2oSpPhizTBQQhvN4AOE8GyRyI6IoN3Qwx6F0D40A==
 
+drag-selectjs@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/drag-selectjs/-/drag-selectjs-0.0.2.tgz#dea41c35c51e54b6ca1427d92fd528f785d92352"
+  integrity sha512-TqLvEJSD9jgyuyx9XQUG23NK8rTEHC/m4Rb8Hsx+BoWQhqD+wfmQ4xXoWcNjF5ckYu3rpsdRpv+sGwYKSv5Nwg==
+  dependencies:
+    drag-selectjs "^0.0.1"
+
 esbuild@^0.8.34:
   version "0.8.39"
   resolved "https://registry.yarnpkg.com/esbuild/-/esbuild-0.8.39.tgz#18b84a3d56173c55ee8f45bc6c7b5374b0a98ecb"
