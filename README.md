@@ -8,25 +8,45 @@
 
 ## Installation
 
+### CLI
+
 ```bash
-npm i drag-selectjs
+npm i drag-select
 ```
 
 or...
 
 ```bash
-yarn add drag-selectjs
+yarn add drag-select
+```
+
+### CDN
+
+```html
+<script src="https://unpkg.com/drag-selectjs"></script>
 ```
 
 ## Usage
 
-```js
-import { dragSelect, onSelected } from 'drag-selectjs'
+### CLI
 
-dragSelect('drag-box-class', 'selected-element-class') // Arguments are optional
+```js
+import { init, onSelected } from 'drag-select'
+
+init('drag-box-class', 'selected-element-class') // Arguments are optional
 
 onSelected(selected => {
     console.log(selected) // [div.selected-element-class, ...]
+})
+```
+
+### CDN
+
+```js
+DragSelect.init()
+
+DragSelect.onSelected(selected => {
+    console.log(selected)
 })
 ```
 
