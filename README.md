@@ -39,7 +39,7 @@ First, add the `data-dragselect` attribute to any element you want to make selec
 Then, add any styling for the drag-box and selected elements:
 
 ```css
-/* Class-names can be changed with `init('drag-box-class', 'selected-element-class')` */
+/* Class-names can be changed with `init('box-class', 'selected-class')` */
 .__dragselect--box {
     background-color: rgba(0, 0, 0, 0.5);
 }
