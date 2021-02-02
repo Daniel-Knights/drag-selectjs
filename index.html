@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Drag-Select</title>
+        <style>
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 0;
+                height: 100vh;
+                color: #fff;
+                background-color: rgb(88, 88, 88);
+            }
+            .__dragselect--selected {
+                user-select: none;
+                border: 3px solid red;
+            }
+            #test .__dragselect--selected {
+                border: 3px solid rgb(0, 26, 255);
+            }
+        </style>
+    </head>
+    <body>
+        <div id="test">
+            <div data-dragselect>Drag-Select</div>
+            <div data-dragselect>Drag-Select</div>
+            <div data-dragselect>Drag-Select</div>
+        </div>
+        <div>Drag-Select</div>
+        <div data-dragselect>Drag-Select</div>
+        <div data-dragselect>Drag-Select</div>
+        <div data-dragselect>Drag-Select</div>
+        <div data-dragselect>Drag-Select</div>
+        <div data-dragselect>Drag-Select</div>
+        <script type="module">
+            import { dragSelect, onSelected } from './lib/main'
+
+            dragSelect()
+            onSelected(console.log)
+        </script>
+    </body>
+</html>

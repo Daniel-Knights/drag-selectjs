@@ -1,0 +1,27 @@
+{
+    "name": "drag-select",
+    "version": "0.0.0",
+    "scripts": {
+        "dev": "vite",
+        "build": "tsc && vite build",
+        "serve": "vite preview",
+        "lib": "npm version patch && npm publish",
+        "lib-minor": "npm version minor && npm publish",
+        "lib-major": "npm version major && npm publish"
+    },
+    "devDependencies": {
+        "typescript": "^4.1.2",
+        "vite": "^2.0.0-beta.50"
+    },
+    "files": [
+        "dist"
+    ],
+    "main": "./dist/drag-select.umd.js",
+    "module": "./dist/drag-select.es.js",
+    "exports": {
+        ".": {
+            "import": "./dist/drag-select.es.js",
+            "require": "./dist/drag-select.umd.js"
+        }
+    }
+}
