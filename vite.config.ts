@@ -5,7 +5,7 @@ export default defineConfig({
     build: {
         lib: {
             entry: 'lib/main.ts',
-            name: 'drag-selectjs'
+            name: 'DragSelect'
         }
     }
 })

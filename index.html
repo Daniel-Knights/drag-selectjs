@@ -22,6 +22,7 @@
                 border: 3px solid rgb(0, 26, 255);
             }
         </style>
+        <script src="https://unpkg.com/drag-selectjs@0.0.3/dist/drag-selectjs.umd.js"></script>
     </head>
     <body>
         <div id="test">
@@ -36,7 +37,7 @@
         <div data-dragselect>Drag-Select</div>
         <div data-dragselect>Drag-Select</div>
         <script type="module">
-            import { dragSelect, onSelected } from 'drag-selectjs'
+            const { dragSelect, onSelected } = window['drag-selectjs']
 
             dragSelect()
             onSelected(console.log)
