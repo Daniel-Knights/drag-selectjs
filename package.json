@@ -16,12 +16,12 @@
     "files": [
         "dist"
     ],
-    "main": "./dist/drag-select.umd.js",
-    "module": "./dist/drag-select.es.js",
+    "main": "./dist/drag-selectjs.umd.js",
+    "module": "./dist/drag-selectjs.es.js",
     "exports": {
         ".": {
-            "import": "./dist/drag-select.es.js",
-            "require": "./dist/drag-select.umd.js"
+            "import": "./dist/drag-selectjs.es.js",
+            "require": "./dist/drag-selectjs.umd.js"
         }
     },
     "dependencies": {
