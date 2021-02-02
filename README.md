@@ -6,6 +6,8 @@
 -   Easy to use 🌞
 -   Compatible with any frontend framework 🔥
 
+[CodePen Demo](https://codepen.io/daniel-knights/pen/BaQNvym)
+
 ## Installation
 
 ### CLI
@@ -28,10 +30,30 @@ yarn add drag-select
 
 ## Usage
 
+Just add the `data-dragselect` attribute to any element you want to make selectable:
+
+```html
+<div data-dragselect>SELECT ME!</div>
+```
+
+Then add any styling for the drag-box and selected elements:
+
+```css
+// Class-names can be changed with `init('drag-box-class', 'selected-element-class')`
+.__dragselect--box {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.__dragselect--selected {
+    border: 3px solid #808080;
+}
+```
+
+All you need to do now is initialise **`drag-selectjs`**::
+
 ### CLI
 
 ```js
-import { init, onSelected } from 'drag-select'
+import { init, onSelected } from 'drag-selectjs'
 
 init('drag-box-class', 'selected-element-class') // Arguments are optional
 
