@@ -8,7 +8,7 @@ let onSelectedCallback: (els: Element[]) => unknown
  *   console.log(selected) // [div.__dragselect--selected]
  * })
  */
-export function onSelected(cb: () => unknown) {
+export function onSelected(cb: () => unknown): void {
     onSelectedCallback = cb
 }
 
@@ -20,7 +20,7 @@ export function onSelected(cb: () => unknown) {
 export function init(
     dragBoxClass = '__dragselect--box',
     selectedClass = '__dragselect--selected'
-) {
+): void {
     const dragBox = document.createElement('div')
     const stylesheet = document.createElement('style')
     const selectableEls = document.querySelectorAll('[data-dragselect]')

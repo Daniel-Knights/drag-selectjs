@@ -21,9 +21,14 @@
         "serve": "vite preview",
         "lib": "npm version patch && npm publish",
         "lib-minor": "npm version minor && npm publish",
-        "lib-major": "npm version major && npm publish"
+        "lib-major": "npm version major && npm publish",
+        "lint": "npx eslint lib"
     },
     "devDependencies": {
+        "@typescript-eslint/eslint-plugin": "^4.14.2",
+        "@typescript-eslint/parser": "^4.14.2",
+        "drag-selectjs": "^0.0.8",
+        "eslint": "^7.19.0",
         "typescript": "^4.1.2",
         "vite": "^2.0.0-beta.50"
     },
@@ -37,9 +42,6 @@
             "import": "./dist/drag-selectjs.es.js",
             "require": "./dist/drag-selectjs.umd.js"
         }
-    },
-    "dependencies": {
-        "drag-selectjs": "^0.0.7"
     },
     "keywords": [
         "javascript",

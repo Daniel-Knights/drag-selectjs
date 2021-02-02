@@ -28,7 +28,7 @@
                 background-color: rgba(0, 0, 0, 0.5);
             }
         </style>
-        <script src="https://unpkg.com/drag-selectjs@0.0.7/dist/drag-selectjs.umd.js"></script>
+        <script src="https://unpkg.com/drag-selectjs"></script>
     </head>
     <body>
         <div id="test">
@@ -43,11 +43,12 @@
         <div data-dragselect>Drag-Select</div>
         <div data-dragselect>Drag-Select</div>
         <script type="module">
-            import { init, onSelected } from './lib/main'
+            import { init, onSelected } from 'drag-selectjs'
             init()
-
-            // DragSelect.dragSelect()
             onSelected(console.log)
+
+            // DragSelect.init()
+            // DragSelect.onSelected(console.log)
         </script>
     </body>
 </html>
