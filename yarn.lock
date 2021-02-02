@@ -19,6 +19,13 @@ drag-selectjs@^0.0.5:
   dependencies:
     drag-selectjs "^0.0.4"
 
+drag-selectjs@^0.0.7:
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/drag-selectjs/-/drag-selectjs-0.0.7.tgz#ce07b0d81a67e8ada00614dfd9af7d8d6487fcab"
+  integrity sha512-DNhhRdCBx2uLs1elRP+mEO05m9+ZMw7qkN/CoWZtYTOcAibCnqA1dd1boTb84uydm8Ut8x0UWEfhCxDV9FK0uA==
+  dependencies:
+    drag-selectjs "^0.0.5"
+
 esbuild@^0.8.34:
   version "0.8.39"
   resolved "https://registry.yarnpkg.com/esbuild/-/esbuild-0.8.39.tgz#18b84a3d56173c55ee8f45bc6c7b5374b0a98ecb"

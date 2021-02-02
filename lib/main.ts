@@ -110,6 +110,8 @@ export function init(
         )
             return
 
+        document.body.classList.add('__dragselect--dragging')
+
         selectableEls.forEach(el => {
             const elRect = el.getBoundingClientRect()
 
@@ -170,6 +172,10 @@ export function init(
         dragging = false
         dragBox.removeAttribute('style')
 
+        if ([...document.body.classList].includes('__dragselect--dragging')) {
+            document.body.classList.remove('__dragselect--dragging')
+        }
+
         if (selectedEls.length) {
             onSelectedCallback(selectedEls)
         }
@@ -178,9 +184,11 @@ export function init(
     function appendStylesheet() {
         stylesheet.type = 'text/css'
         stylesheet.id = '__drag-select-stylesheet'
-        stylesheet.innerHTML = minify(`            
+        stylesheet.innerHTML = minify(`
+            body.__dragselect--dragging {
+                user-select: none;
+            }            
             .${dragBoxClass} {
-                pointer-events: none;
                 position: absolute;
                 width: 0;
                 height: 0;

@@ -39,7 +39,7 @@
         }
     },
     "dependencies": {
-        "drag-selectjs": "^0.0.5"
+        "drag-selectjs": "^0.0.7"
     },
     "keywords": [
         "javascript",
