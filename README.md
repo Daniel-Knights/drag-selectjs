@@ -30,16 +30,16 @@ yarn add drag-select
 
 ## Usage
 
-Just add the `data-dragselect` attribute to any element you want to make selectable:
+First, add the `data-dragselect` attribute to any element you want to make selectable:
 
 ```html
 <div data-dragselect>SELECT ME!</div>
 ```
 
-Then add any styling for the drag-box and selected elements:
+Then, add any styling for the drag-box and selected elements:
 
 ```css
-// Class-names can be changed with `init('drag-box-class', 'selected-element-class')`
+/* Class-names can be changed with `init('drag-box-class', 'selected-element-class')` */
 .__dragselect--box {
     background-color: rgba(0, 0, 0, 0.5);
 }
@@ -48,7 +48,7 @@ Then add any styling for the drag-box and selected elements:
 }
 ```
 
-All you need to do now is initialise **`drag-selectjs`**::
+Now, all you need to do is initialise **`drag-selectjs`**:
 
 ### CLI
 
