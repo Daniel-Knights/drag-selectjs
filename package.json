@@ -19,9 +19,10 @@
         "dev": "vite",
         "build": "tsc && vite build",
         "serve": "vite preview",
-        "lib": "npm version patch && npm publish",
-        "lib-minor": "npm version minor && npm publish",
-        "lib-major": "npm version major && npm publish",
+        "lib": "npm run build",
+        "pub": "npm version patch && npm publish",
+        "pub-minor": "npm version minor && npm publish",
+        "pub-major": "npm version major && npm publish",
         "lint": "npx eslint lib"
     },
     "devDependencies": {
@@ -33,7 +34,8 @@
         "vite": "^2.0.0-beta.50"
     },
     "files": [
-        "dist"
+        "dist",
+        "lib/drag-selectjs.d.ts"
     ],
     "main": "./dist/drag-selectjs.umd.js",
     "module": "./dist/drag-selectjs.es.js",
@@ -43,6 +45,7 @@
             "require": "./dist/drag-selectjs.umd.js"
         }
     },
+    "types": "./lib/drag-selectjs.d.ts",
     "keywords": [
         "javascript",
         "typescript",
