@@ -45,6 +45,9 @@
         ".": {
             "import": "./dist/drag-selectjs.es.js",
             "require": "./dist/drag-selectjs.umd.js"
+        },
+        "./package.json": {
+            "default": "./package.json"
         }
     },
     "types": "./lib/drag-selectjs.d.ts",
