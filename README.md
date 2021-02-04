@@ -13,13 +13,13 @@
 ### CLI
 
 ```bash
-npm i drag-select
+npm i drag-selectjs
 ```
 
 _or..._
 
 ```bash
-yarn add drag-select
+yarn add drag-selectjs
 ```
 
 ### CDN
