@@ -10,7 +10,7 @@
                 justify-content: center;
                 align-items: center;
                 margin: 0;
-                height: 100vh;
+                height: 200vh;
                 color: #fff;
                 background-color: rgb(88, 88, 88);
             }
@@ -28,7 +28,7 @@
                 background-color: rgba(0, 0, 0, 0.5);
             }
         </style>
-        <script src="https://unpkg.com/drag-selectjs"></script>
+        <!-- <script src="https://unpkg.com/drag-selectjs"></script> -->
     </head>
     <body>
         <div id="test">
@@ -43,7 +43,7 @@
         <div data-dragselect>Drag-Select</div>
         <div data-dragselect>Drag-Select</div>
         <script type="module">
-            import { init, onSelected } from 'drag-selectjs'
+            import { init, onSelected } from './lib/main'
             init()
             onSelected(console.log)
 

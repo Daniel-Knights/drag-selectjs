@@ -24,7 +24,7 @@ export function init(
     const dragBox = document.createElement('div')
     const stylesheet = document.createElement('style')
     const selectableEls = document.querySelectorAll('[data-dragselect]')
-    const coords = { x: 0, y: 0 }
+    const coords = { pageX: 0, pageY: 0, clientX: 0, clientY: 0 }
 
     let selectedEls: Element[] = []
     let dragging: boolean
@@ -70,30 +70,30 @@ export function init(
     }
 
     function resizeDragBox(e: MouseEvent) {
-        if (!dragging || e.clientX < 0 || e.clientY < 0) return
+        if (!dragging || e.pageX < 0 || e.pageY < 0) return
 
-        const { clientX, clientY } = e
-        const { x, y } = coords
-        const width = clientX - x
-        const height = clientY - y
+        const { pageX, pageY } = e
+        const { pageX: coordsX, pageY: coordsY } = coords
+        const width = pageX - coordsX
+        const height = pageY - coordsY
 
         if (dragBox.style.opacity !== '1') {
             dragBox.style.opacity = '1'
         }
 
         if (width < 0) {
-            dragBox.style.left = clientX + 'px'
+            dragBox.style.left = pageX + 'px'
             dragBox.style.width = Math.abs(width) + 'px'
         } else {
-            dragBox.style.left = x + 'px'
+            dragBox.style.left = coordsX + 'px'
             dragBox.style.width = width + 'px'
         }
 
         if (height < 0) {
-            dragBox.style.top = clientY + 'px'
+            dragBox.style.top = pageY + 'px'
             dragBox.style.height = Math.abs(height) + 'px'
         } else {
-            dragBox.style.top = y + 'px'
+            dragBox.style.top = coordsY + 'px'
             dragBox.style.height = height + 'px'
         }
     }
@@ -116,26 +116,26 @@ export function init(
             const elRect = el.getBoundingClientRect()
 
             const toBottomRight =
-                coords.x < elRect.right &&
-                coords.y < elRect.bottom &&
+                coords.clientX < elRect.right &&
+                coords.clientY < elRect.bottom &&
                 dragRect.right > elRect.left &&
                 dragRect.bottom > elRect.top
 
             const toBottomLeft =
-                coords.x > elRect.left &&
-                coords.y < elRect.bottom &&
+                coords.clientX > elRect.left &&
+                coords.clientY < elRect.bottom &&
                 dragRect.left < elRect.right &&
                 dragRect.bottom > elRect.top
 
             const toTopLeft =
-                coords.x > elRect.left &&
-                coords.y > elRect.bottom &&
+                coords.clientX > elRect.left &&
+                coords.clientY > elRect.bottom &&
                 dragRect.left < elRect.right &&
                 dragRect.top < elRect.bottom
 
             const toTopRight =
-                coords.x < elRect.right &&
-                coords.y > elRect.bottom &&
+                coords.clientX < elRect.right &&
+                coords.clientY > elRect.bottom &&
                 dragRect.right > elRect.left &&
                 dragRect.top < elRect.bottom
 
@@ -156,8 +156,10 @@ export function init(
 
     function mouseDownHandler(e: MouseEvent) {
         dragging = true
-        coords.x = e.clientX
-        coords.y = e.clientY
+        coords.pageX = e.pageX
+        coords.pageY = e.pageY
+        coords.clientX = e.clientX
+        coords.clientY = e.clientY
 
         selectableEls.forEach(el => el.classList.remove(selectedClass))
         selectedEls = []
