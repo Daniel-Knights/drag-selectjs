@@ -16,7 +16,7 @@
 npm i drag-select
 ```
 
-or...
+_or..._
 
 ```bash
 yarn add drag-select
