@@ -23,7 +23,8 @@
         "pub": "npm version patch && npm publish",
         "pub-minor": "npm version minor && npm publish",
         "pub-major": "npm version major && npm publish",
-        "lint": "npx eslint lib"
+        "lint": "npx eslint lib",
+        "postinstall": "node install.js"
     },
     "devDependencies": {
         "@typescript-eslint/eslint-plugin": "^4.14.2",
@@ -35,7 +36,8 @@
     },
     "files": [
         "dist",
-        "lib/drag-selectjs.d.ts"
+        "lib/drag-selectjs.d.ts",
+        "install.js"
     ],
     "main": "./dist/drag-selectjs.umd.js",
     "module": "./dist/drag-selectjs.es.js",
