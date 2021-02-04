@@ -1,6 +1,6 @@
 declare module 'drag-selectjs' {
-    interface DragSelect {
-        init: (dragBoxClass?: string, selectedClass?: string) => void
-        onSelected: (cb: () => unknown) => void
-    }
+    function init(dragBoxClass?: string, selectedClass?: string): void
+    function onSelected(cb: () => unknown): void
+
+    export { init, onSelected }
 }
